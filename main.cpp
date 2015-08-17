@@ -171,7 +171,7 @@ bool write_popularimeter()
          if (!file.exists())
             log_warn("Failed to find file %s.", qPrintable(file.absoluteFilePath()));
          else {
-            log_info("Writing info (%d, %d) to %s.", playCount, rating, qPrintable(file.absoluteFilePath()));
+				log_info("Writing info (%d, %d) to %s.", playCount, rating, qPrintable(file.absoluteFilePath()));
             if (!write_popularimeter_to_mp3(file.absoluteFilePath(), playCount, rating))
                return false;
          }
